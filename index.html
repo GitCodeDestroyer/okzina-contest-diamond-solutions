@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>OKZina</title>
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/select.dataTables.min.css">
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="new-item">
+        <p id="item-line">Продукт<span class="error"></span> <input id="item" type="text"></p>
+        <p id="qty-line">Кол-во<span class="error"></span> <input id="qty" type="number" min="1"></p>
+        <p id="price-line">Цена<span class="error"></span> <input id="price" type="number" min="1"></p>
+        <a href="#" class="btn">Новый продукт</a>
+    </div>
+    <div class="nav">
+        <a class="btn new-cart"><span class="pe-7s-plus"></span> Новая корзина</a>
+        <a href="" class="btn left"><span class="pe-7s-refresh"></span> Очистить</a>
+    </div>
+    <div class="carts"></div>
+    <div class="total">
+        <div class="carts-total">
+        </div>
+        <div class="total-price">
+            <p>0</p>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <script>
+        require('./renderer.js')
+    </script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

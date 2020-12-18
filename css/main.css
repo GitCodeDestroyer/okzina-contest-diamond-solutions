@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font: lighter 18px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #3C3F50;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 8px;
+    color: #3C3F50;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn::selection {
+    background: transparent;
+}
+
+.btn:hover {
+    background: #F6F6F6;
+}
+
+.btn:active {
+    background: #EEE;
+}
+
+.btn span {
+    font-size: 22px;
+    line-height: 45px;
+    float: left;
+    padding-right: 8px;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 2;
+    display: none;
+}
+
+.triangle {
+    top: 73px;
+    z-index: 2;
+    left: calc(4% + 32.5px - 18px);
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 21px solid #FEFEFE;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*************** TABLE STYLES **************/
+
+thead {
+    border-bottom: none;
+}
+
+th {
+    background: #FFF;
+    padding: 0 5px;
+    border-left: 1px solid #F5F5F5;
+}
+
+tr {
+    height: 50px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    -webkit-user-select: text;
+}
+
+tr.even td {
+    border-left: 1px solid #F5F5F5;
+}
+
+tr.odd td {
+    border-left: 1px solid #EFEFEF;
+}
+tr.even {
+    background: #FFF;
+}
+
+tr.odd {
+    background: #F7F7F7;
+}
+
+/*************** TOP NAVIGATION **************/
+
+.nav {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: #FFF;
+    z-index: 10;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.nav .left {
+    float: right;
+}
+
+/****************** CONTENT ******************/
+
+.carts {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: calc(100% - 350px);
+    height: calc(100% - 45px);
+    padding: 0 2% 60px 2%;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: lighter;
+    padding: 10px;
+    margin: 7px 0 20px 0;
+    background: #FAFAFA;
+    border-radius: 3px;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, .03);
+    display: block;
+}
+
+.new-item {
+    position: fixed;
+    top: calc((100% - 400px) / 2);
+    left: calc((100vw - 450px) / 2);
+    width: 450px;
+    background: #FFF;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 3px;
+    display: none;
+}
+
+.new-item p {
+    width: 100%;
+    display: block;
+}
+
+.new-item .btn,
+.carts .btn {
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background .2s;
+    margin-top: 20px;
+    color: #FFF;
+    background: #4fc953;
+    border: none;
+}
+
+.new-item .btn:hover,
+.carts .btn:hover {
+    background: #4fd654;
+}
+
+.carts h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.carts h3 .btn {
+    font-size: 14px;
+    padding: 7px 16px;
+    font-weight: lighter;
+    margin-left: 10px;
+    display: inline;
+}
+
+.error {
+    color: #E9908A;
+    margin-left: 10px;
+}
+
+.carts-total p {
+    border-bottom: 1px solid #EFEFEF;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.carts-total p span {
+    float: right;
+}
+
+/****************** CONTENT ******************/
+
+.total {
+    position: fixed;
+    right: 0;
+    top: 44px;
+    height: calc(100% - 44px);
+    width: 350px;
+    background: #FFF;
+    border-left: 1px solid #EFEFEF;
+}
+
+.total .carts-total {
+    overflow: auto;
+    height: calc(80vh - 44px);
+} 
+
+.total .total-price {
+    -webkit-user-select: text;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    border-top: 1px solid #EFEFEF;
+    height: 20%;
+    display: flex;
+    font-size: 30px;
+    font-family: "Segoe UI Black";
+}
+
+.total .total-price p {
+    margin: auto;
+}
